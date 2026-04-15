@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Coffee | Bean & Brew</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+
+<header>
+   <a href="index.html" class="logo">Bean<span>&Brew</span></a>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Add Coffee ☕</h2>
+        <select id="coffee" style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px;"></select>
+        <input type="number" id="qty" value="1" min="1">
+        <button onclick="addItem()">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <h2>Your Cart 🛒</h2>
+        <div id="cartItems"></div>
+        <div class="total" id="total"></div>
+    </div>
+
+    <div class="card">
+        <h2>Order Details ☕</h2>
+        <form id="orderForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            
+            <textarea id="address" rows="3" placeholder="Full Delivery Address" required></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="order.js"></script>
+</body>
+</html>

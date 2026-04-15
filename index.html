@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew | The Ultimate Coffee Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Bean<span>&Brew</span></div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Experience</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-cart-wrapper">
+                    <a href="order.html" class="nav-cart">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="subtitle">ESTABLISHED 2026</span>
+            <h1>Where Every Bean <br> Tells a Story</h1>
+            <p>Experience the rich aroma of hand-picked Arabica beans roasted to perfection.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn">Explore Menu</a>
+                <a href="order.html" class="btn" target="_blank">Order Now ☕</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="feature-card">
+                <h3>Organic Beans</h3>
+                <p>100% sustainably sourced beans from organic certified farms.</p>
+            </div>
+            <div class="feature-card">
+                <h3>In-House Roasting</h3>
+                <p>We roast in small batches to ensure the freshest flavor profile.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast Delivery</h3>
+                <p>Get your favorite brew delivered hot at your doorstep within 20 mins.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Craft Brews</h2>
+        <p class="section-subtitle">From classic espresso to our signature seasonal specials.</p>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="img-container">
+                    <img src="caramel-macchiato.webp" alt="Latte">
+                </div>
+                <h3>Caramel Macchiato</h3>
+                <p>Freshly steamed milk with vanilla-flavored syrup marked with espresso.</p>
+                <span class="price">₹280</span>
+                <button onclick="addToCart('Caramel Macchiato', 280)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div class="img-container">
+                    <img src="Midnight Cold Brew.webp" alt="Cold Brew">
+                </div>
+                <h3>Midnight Cold Brew</h3>
+                <p>12-hour steep for a smooth, low-acid, high-caffeine kick.</p>
+                <span class="price">₹220</span>
+                <button onclick="addToCart('Midnight Cold Brew', 220)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div class="img-container">
+                    <img src="Dark Chocolate Mocha.webp" alt="Mocha">
+                </div>
+                <h3>Dark Chocolate Mocha</h3>
+                <p>Espresso combined with bittersweet mocha sauce and steamed milk.</p>
+                <span class="price">₹310</span>
+                <button onclick="addToCart('Dark Chocolate Mocha', 310)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div class="img-container">
+                    <img src="Java Chip Frappe.webp" alt="Frappe">
+                </div>
+                <h3>Java Chip Frappe</h3>
+                <p>Tall, cold, and blended with chocolate chips and whipped cream.</p>
+                <span class="price">₹350</span>
+                <button onclick="addToCart('Java Chip Frappe', 350)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div class="img-container">
+                    <img src="Classic Affogato.webp" alt="Affogato">
+                </div>
+                <h3>Classic Affogato</h3>
+                <p>A scoop of vanilla gelato "drowned" with a shot of hot espresso.</p>
+                <span class="price">₹190</span>
+                <button onclick="addToCart('Classic Affogato', 190)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div class="img-container">
+                    <img src="Spanish Cortado.webp" alt="Cortado">
+                </div>
+                <h3>Spanish Cortado</h3>
+                <p>Equal parts espresso and warm silky milk to reduce acidity.</p>
+                <span class="price">₹240</span>
+                <button onclick="addToCart('Spanish Cortado', 240)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title" style="color: white;">What Our Roasters Say</h2>
+        <div class="slider-container">
+            <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slider-wrapper">
+                <div class="testimonial-slider" id="testimonial-slider">
+                    <div class="t-card"><p>"The best coffee in town. Perfect for coding!"</p><h4>- Rahul Sharma</h4></div>
+                    <div class="t-card"><p>"Their Cold Brew is a game changer. Great vibes."</p><h4>- Sneha Kapoor</h4></div>
+                    <div class="t-card"><p>"The aroma here is magical. Love the Cortado!"</p><h4>- Amit Verma</h4></div>
+                    <div class="t-card"><p>"Fast delivery and still hot. Impressed!"</p><h4>- Priya Das</h4></div>
+                </div>
+            </div>
+            <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>Bean & Brew</h3>
+                <p>Crafting the perfect cup since 2026.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Hours</h3>
+                <p>Mon - Fri: 8 AM - 10 PM</p>
+                <p>Sat - Sun: 9 AM - 11 PM</p>
+            </div>
+            <div class="footer-box">
+                <h3>Location</h3>
+                <p>Main Market, Model Town, Yamunanagar</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Crafted with HTML, CSS & JS.
+        </div>
+    </footer>
+
+    <div id="popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <span id="closePopup" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
+            <h2>🎉 Special Offer</h2>
+            <p>Get 20% OFF on your first order!</p>
+            <button onclick="window.location.href='order.html'">Order Now</button>
+        </div>
+    </div>
+    <script src="style.js"></script>
+</body>
+</html>
